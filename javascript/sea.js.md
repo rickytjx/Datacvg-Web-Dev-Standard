@@ -9,7 +9,7 @@
 
 ```js
 /**
- * CMD模块化定义规则
+ * 模块化定义规范
  * 
  * @author Ricky Tang
  * Copyright 2016 Datacvg Inc. All Rights Reserved.

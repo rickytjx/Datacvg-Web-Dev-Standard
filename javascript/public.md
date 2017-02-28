@@ -41,7 +41,6 @@ function foo(p1, p2, p3) {
         p3: p3
     };
 }
-
 ```
 
 **文件注释**
@@ -52,8 +51,8 @@ function foo(p1, p2, p3) {
 /**
  * @fileoverview Description of file, its uses and information
  * about its dependencies.
- * @author user@meizu.com (Firstname Lastname)
- * Copyright 2009 Meizu Inc. All Rights Reserved.
+ * @author user@datacvg.com (Firstname Lastname)
+ * Copyright 2009 Datacvg Inc. All Rights Reserved.
  */
 ```
 
@@ -98,7 +97,6 @@ function TextNode(value, engine) {
 TextNode.prototype.clone = function() {
     returnthis;
 };
-
 ```
 
 1. **枚举变量**
@@ -303,7 +301,6 @@ if (val != 0) {
 
 // Recommended
 return val ? foo() : bar();
-
 ```
 
 #### && 和 \|\| {#-%E5%92%8C}

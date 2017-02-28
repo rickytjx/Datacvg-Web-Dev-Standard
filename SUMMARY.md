@@ -6,4 +6,5 @@
   * [CSS](css.md)
     * [基本规范](css/public.md)
   * [JavaScript](javascript.md)
+    * [基本规范](javascript/public.md)
 

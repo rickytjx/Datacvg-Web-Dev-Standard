@@ -16,7 +16,7 @@
  */
 define(function(require, exports, module){
     "use strict"; // 开启严格模式
-    
+
     /**
      * 定义初始化函数
      *

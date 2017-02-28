@@ -7,7 +7,7 @@
   * [CSS](css.md)
     * [基本规范](css/public.md)
     * [Sass 规范](css/sass.md)
-  * [JavaScript](javascript/.md)
+  * [JavaScript](javascript.md)
     * [基本规范](javascript/public.md)
     * [Sea.js 规范](javascript/sea.js.md)
     * [Vue.js 规范](javascript/vue.js.md)

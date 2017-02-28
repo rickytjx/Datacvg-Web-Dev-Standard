@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-  * [HTML](html/.md)
+  * [HTML](html.md)
     * [基本规范](html/public.md)
     * [HEAD](html/head.md)
   * [CSS](css.md)

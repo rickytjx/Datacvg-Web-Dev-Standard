@@ -1,4 +1,4 @@
-# 通用规范 {#%E9%80%9A%E7%94%A8%E7%BA%A6%E5%AE%9A}
+# 基本规范 {#%E9%80%9A%E7%94%A8%E7%BA%A6%E5%AE%9A}
 
 ---
 
@@ -183,7 +183,6 @@ html{
   .element-avatar { ... }
   .element-selected { ... }
 }
-
 ```
 
 #### 不要使用`@import` {#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8-import}

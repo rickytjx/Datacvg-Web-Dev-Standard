@@ -45,185 +45,50 @@
 
 元素选择器和 ID、Class 混合使用也违反关注分离原则。如果HTML标签修改了，就要再去修改 CSS 代码，不利于后期维护。
 
-```
+```css
 /* Not recommended */
-.red
-{
-}
-.box_green
-{
-}
-.page
-.header
-.login
-#username
-input
-{
-}
-ul
-#example
-{
-}
+.red {}
+.box_green {}
+.page .header .login #username input {}
+ul#example {}
+
 /* Recommended */
-#nav
-{
-}
-.box-video
-{
-}
-#username
-input
-{
-}
-#example
-{
-}
+#nav {}
+.box-video {}
+#username input {}
+#example {}
 ```
 
 #### 声明块格式 {#%E5%A3%B0%E6%98%8E%E5%9D%97%E6%A0%BC%E5%BC%8F}
 
 * 选择器分组时，保持独立的选择器占用一行；
-* 声明块的左括号
-  `{`
-  前添加一个空格；
-* 声明块的右括号
-  `}`
-  应单独成行；
-* 声明语句中的
-  `:`
-  后应添加一个空格；
-* 声明语句应以分号
-  `;`
-  结尾；
+* 声明块的左括号`{`前添加一个空格；
+* 声明块的右括号`}`应单独成行；
+* 声明语句中的`:`后应添加一个空格；
+* 声明语句应以分号`;`结尾；
 * 一般以逗号分隔的属性值，每个逗号后应添加一个空格；
-* `rgb()`
-  、
-  `rgba()`
-  、
-  `hsl()`
-  、
-  `hsla()`
-  或
-  `rect()`
-  括号内的值，逗号分隔，但逗号后不添加一个空格；
-* 对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，
-  `.5`
-  代替
-  `0.5`
-  ；
-  `-.5px`
-  代替
-  `-0.5px`
-  ）；
-* 十六进制值应该全部小写和尽量简写，例如，
-  `#fff`
-  代替
-  `#ffffff`
-  ；
-* 避免为 0 值指定单位，例如，用
-  `margin: 0;`
-  代替
-  `margin: 0px;`
-  ；
+* `rgb()`、`rgba()`、`hsl()`、`hsla()`或`rect()`括号内的值，逗号分隔，但逗号后不添加一个空格；
+* 对于属性值或颜色参数，省略小于 1 的小数前面的 0 （例如，`.5`代替`0.5`；`-.5px`代替`-0.5px`）；
+* 十六进制值应该全部小写和尽量简写，例如，`#fff`代替`#ffffff`；
+* 避免为 0 值指定单位，例如，用`margin: 0;`代替`margin: 0px;`；
 
-```
+```css
 /*  Not recommended  */
-.selector
-, 
-.selector-secondary
-, 
-.selector
-[type=text]
-{
-  
-padding
-:
-15px
-;
-  
-margin
-:
-0px
-0px
-15px
-;
-  
-background-color
-:
-rgba
-(
-0
-, 
-0
-, 
-0
-, 
-0.5
-)
-;
-  
-box-shadow
-:
-0px
-1px
-2px
-#CCC
-,inset 
-0
-1px
-0
-#FFFFFF
+.selector, .selector-secondary, .selector[type=text] {
+  padding:15px;
+  margin:0px 0px 15px;
+  background-color:rgba(0, 0, 0, 0.5);
+  box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
 }
 
-
 /* Recommended */
-.selector
-,
-
-.selector-secondary
-,
-
-.selector
-[type="text"]
-{
-  
-padding
-:
-15px
-;
-  
-margin-bottom
-:
-15px
-;
-  
-background-color
-:
-rgba
-(
-0
-,
-0
-,
-0
-,.
-5
-)
-;
-  
-box-shadow
-:
-0
-1px
-2px
-#ccc
-, inset 
-0
-1px
-0
-#fff
-;
-
+.selector,
+.selector-secondary,
+.selector[type="text"] {
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, .5);
+  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
 }
 ```
 
@@ -241,95 +106,40 @@ box-shadow
 其他属性只是影响组件的内部（inside）或者是不影响前两组属性，因此排在后面。
 
 ```
-.declaration-order
-{
-  
-/* Positioning */
-position
-:
- absolute
-;
-  
-top
-:
-0
-;
-  
-right
-:
-0
-;
-  
-bottom
-:
-0
-;
-  
-left
-:
-0
-;
-  
-z-index
-:
-100
-;
+.declaration-order {
+  /* Positioning */
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
 
-  
-/* Box model */
-display
-:
- block
-;
-  
-box-sizing
-:
- border-box
-;
-  
-width
-:
-100px
-;
-  
-height
-:
-100px
-;
-  
-padding
-:
-10px
-;
-  
-border
-:
-1px
- solid 
-#e5e5e5
-;
-  
-border-radius
-:
-3px
-;
-  
+  /* Box model */
+  display: block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+
 margin
 :
 10px
 ;
-  
+
 float
 :
  right
 ;
-  
+
 overflow
 :
  hidden
 ;
 
-  
+
 /* Typographic */
 font
 :
@@ -338,36 +148,36 @@ font
 "Helvetica Neue"
 , sans-serif
 ;
-  
+
 line-height
 :
 1.5
 ;
-  
+
 text-align
 :
  center
 ;
 
-  
+
 /* Visual */
 background-color
 :
 #f5f5f5
 ;
-  
+
 color
 :
 #fff
 ;
-  
+
 opacity
 :
  .
 8
 ;
 
-  
+
 /* Other */
 cursor
 :
@@ -392,7 +202,7 @@ url
 
 html
 {
-  
+
 font-family
 :
 'open sans'
@@ -412,7 +222,7 @@ url
 
 html
 {
-  
+
 font-family
 :
 "open sans"
@@ -442,7 +252,6 @@ font-family
   .element-avatar { ... }
   .element-selected { ... }
 }
-
 ```
 
 #### 不要使用`@import` {#%E4%B8%8D%E8%A6%81%E4%BD%BF%E7%94%A8-import}

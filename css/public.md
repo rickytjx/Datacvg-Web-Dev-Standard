@@ -105,7 +105,7 @@ ul#example {}
 
 其他属性只是影响组件的内部（inside）或者是不影响前两组属性，因此排在后面。
 
-```
+```css
 .declaration-order {
   /* Positioning */
   position: absolute;
@@ -123,67 +123,22 @@ ul#example {}
   padding: 10px;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
+  margin: 10px;
+  float: right;
+  overflow: hidden;
 
-margin
-:
-10px
-;
+  /* Typographic */
+  font: normal 13px "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  text-align: center;
 
-float
-:
- right
-;
+  /* Visual */
+  background-color: #f5f5f5;
+  color: #fff;
+  opacity: .8;
 
-overflow
-:
- hidden
-;
-
-
-/* Typographic */
-font
-:
- normal 
-13px
-"Helvetica Neue"
-, sans-serif
-;
-
-line-height
-:
-1.5
-;
-
-text-align
-:
- center
-;
-
-
-/* Visual */
-background-color
-:
-#f5f5f5
-;
-
-color
-:
-#fff
-;
-
-opacity
-:
- .
-8
-;
-
-
-/* Other */
-cursor
-:
- pointer
-;
-
+  /* Other */
+  cursor: pointer;
 }
 ```
 
@@ -191,49 +146,21 @@ cursor
 
 `url()`、属性选择符、属性值使用双引号。 参考[Is quoting the value of url\(\) really necessary?](http://stackoverflow.com/questions/2168855/is-quoting-the-value-of-url-really-necessary)
 
-```
+```css
 /* Not recommended */
-@
-import
-url
-(//www.google.com/css/maia.css)
-;
+@import url(//www.google.com/css/maia.css);
 
-
-html
-{
-
-font-family
-:
-'open sans'
-, arial, sans-serif
-;
-
+html {
+  font-family: 'open sans', arial, sans-serif;
 }
+
 /* Recommended */
-@
-import
-url
-(
-"//www.google.com/css/maia.css"
-)
-;
+@import url("//www.google.com/css/maia.css");
 
-
-html
-{
-
-font-family
-:
-"open sans"
-, arial, sans-serif
-;
-
+html {
+  font-family: "open sans", arial, sans-serif;
 }
-.selector
-[type="text"]
-{
-
+.selector[type="text"]{
 
 }
 ```
@@ -242,7 +169,7 @@ font-family
 
 将媒体查询放在尽可能相关规则的附近。不要将他们打包放在一个单一样式文件中或者放在文档底部。如果你把他们分开了，将来只会被大家遗忘。
 
-```
+```css
 .element { ... }
 .element-avatar { ... }
 .element-selected { ... }
@@ -260,8 +187,7 @@ font-family
 
 替代办法：
 
-* 使用多个
-  元素；
+* 使用多个元素；
 * 通过 Sass 或 Less 类似的 CSS 预处理器将多个 CSS 文件编译为一个文件；
 * 其他 CSS 文件合并工具；
 

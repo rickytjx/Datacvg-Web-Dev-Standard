@@ -10,7 +10,7 @@
  |---build
    |---dist 发布
    |---src
-     |---index.html
+     |---index.html 页面入口
      |---assets 资源
          |---sass  sass文件
          |---img  图片文件

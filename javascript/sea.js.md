@@ -2,6 +2,33 @@
 
 ---
 
+### 目录结构定义
+
+```
+ |---build
+   |---dist 发布
+   |---src
+     |---index.html
+     |---assets 资源
+         |---sass  sass文件
+         |---img  图片文件
+         |---font/  字体图标
+     |---modules 自定义CMD模块
+         |---moduleWindow.js  弹出层组件
+     |---plugins 插件
+         |---seajs
+           |---sea.2.12.1.js
+         |---jquery
+           |---jquery.1.12.1.js
+     |---page 各个页面模块
+       |---login    登陆模块
+         |---login.html
+         |---login.js
+       |---welcome       欢迎页模块
+         |---welcome.html
+         |---welcome.js
+```
+
 ### 代码规范
 
 * 因产品使用的是Sea.js框架来进行模块化开发，阅读到此的人请先阅读[**CMD 模块定义规范**](https://github.com/seajs/seajs/issues/242)

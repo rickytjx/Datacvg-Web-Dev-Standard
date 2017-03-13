@@ -67,7 +67,7 @@ define(function(require, exports, module){
              *
              * @param {string} opts 外部参数对象与内部默认参数对象合并后的对象
              */
-            _init : function(opts){
+            _init: function(opts){
                 $.extend(true, this, opts); // 把合并后接收的对象，继续合并为需要返回的对象
 
                 this.renderData();
@@ -78,23 +78,23 @@ define(function(require, exports, module){
              * 内部所用的函数
              *
              */
-            renderData : function(){
+            renderData: function(){
                 // 渲染数据。。
             },
             /**
              * 绑定事件监听器
              *
              */
-            _initListeners : function(){
+            _initListeners: function(){
                 this.utils.delegates(this.$el, {
-                    '.btn' : function(){
+                    '.btn': function(){
                         // 点击事件
                     },
-                    '.btn2' : function(){
+                    '.btn2': function(){
                         // 点击事件2
                     },
-                    '.checkbox' : {
-                        'change' : function(){
+                    '.checkbox': {
+                        'change': function(){
                             // change事件
                         }
                     }

@@ -56,7 +56,7 @@ define(function(require, exports, module){
     function _initPublish(options){
         // 默认参数对象
         var defaults = {
-            $el: null // 接收DOM对象
+            $element: null // 接收DOM对象
         };
 
         var opts = $.extend(defaults, options); // 合并接收对象数据

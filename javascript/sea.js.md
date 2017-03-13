@@ -86,7 +86,7 @@ define(function(require, exports, module){
              *
              */
             _initListeners: function(){
-                this.utils.delegates(this.$el, {
+                this.utils.delegates(this.$element, {
                     '.btn': function(){
                         // 点击事件
                     },

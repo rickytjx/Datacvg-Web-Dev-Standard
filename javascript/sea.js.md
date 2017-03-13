@@ -71,7 +71,7 @@ define(function(require, exports, module){
                 $.extend(true, this, opts); // 把合并后接收的对象，继续合并为需要返回的对象
 
                 this.renderData();
-                this.initListeners();
+                this._initListeners();
                 this.callback.afterInit.call(this);
             },
             /**
@@ -85,7 +85,7 @@ define(function(require, exports, module){
              * 绑定事件监听器
              *
              */
-            initListeners : function(){
+            _initListeners : function(){
                 this.utils.delegates(this.$el, {
                     '.btn' : function(){
                         // 点击事件
